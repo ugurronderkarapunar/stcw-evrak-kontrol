@@ -1,0 +1,94 @@
+/* ==========================================================
+   Personel Belge Takip Sistemi - Kurumsal Stil
+   Dark / Light mod uyumlu; Streamlit'in kendi tema
+   değişkenlerini kullanır (var(--...)) böylece kullanıcı
+   Streamlit ayarlarından tema değiştirdiğinde otomatik uyum sağlar.
+   ========================================================== */
+
+.main .block-container {
+    padding-top: 1.5rem;
+    max-width: 1400px;
+}
+
+/* KPI Kartları */
+.kpi-card {
+    background: var(--secondary-background-color);
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    border-radius: 14px;
+    padding: 1rem 0.75rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    height: 100%;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.kpi-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+}
+
+.kpi-value {
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 0.15rem;
+}
+
+.kpi-expired .kpi-value { color: #E53935; }
+.kpi-critical .kpi-value { color: #FB8C00; }
+.kpi-upcoming .kpi-value { color: #C9A227; }
+
+/* Başlık şeridi */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #1F3B57 0%, #2E6F95 100%);
+    border-radius: 14px;
+    color: #FFFFFF;
+    margin-bottom: 1.25rem;
+}
+
+.app-header h1 {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.app-header p {
+    color: #DCE9F2;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* Bölüm başlıkları */
+h2, h3 {
+    margin-top: 1.2rem;
+}
+
+/* Dataframe köşe yuvarlama */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Sidebar başlığı */
+[data-testid="stSidebar"] h2 {
+    font-size: 1.05rem;
+}
+
+/* Tab kenarlıkları */
+button[data-baseweb="tab"] {
+    font-weight: 600;
+}
